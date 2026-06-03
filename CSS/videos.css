@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* HOVER EFFECTS */
+.nav a:hover {
+    color: #2d63fc;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: #2d63fc;
+    transition: 0.3s;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+/*logo*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo span {
+    color: #2d63fc;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*logo end*/
+
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav a.active {
+    color: #2d63fc;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.side-menu {
+    display: none;
+}
+
+/* VIDEOS SECTION */
+.videos {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.videos h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+/* Cards layout */
+.video-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Card */
+.card {
+    width: 320px;
+    height: 380px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top (video area) */
+.card-top {
+    flex: 1;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video inside card */
+.card-top video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bottom blue text area */
+.card-bottom {
+    background: #0b55ff;
+    color: #fff;
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+}
+
+/* FOOTER */
+.footer {
+    background: #dfe7ff;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    flex-wrap: wrap;
+}
+
+.footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #2d63fc;
+}
+
+.footer-right a {
+    display: block;
+    margin: 6px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* side menu */
+    .side-menu {
+        display: block;
+        height: calc(100vh - 30px);
+        width: 300px;
+        background: #ffffff;
+        position: fixed;
+        left: -350px;
+        top: 15px;
+        z-index: 1000;
+        transition: left 0.15s ease-in;
+        border-radius: 16px;
+    }
+
+    .active-state .side-menu {
+        left: 0;
+        box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+    }
+
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .side-menu ul li {
+        width: 100%;
+        padding: 8px 30px;
+    }
+
+    .side-menu ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+    }
+
+    .toggler {
+        text-decoration: none;
+        font-size: 30px;
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 10px 16px 0 0;
+    }
+
+    /* cards on mobile */
+    .video-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* footer */
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-line {
+        width: 100%;
+        height: 1px;
+        background: #000000;
+        margin: 20px 0;
+    }
+}

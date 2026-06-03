@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ----------------------------------
+   GLOBAL RESET
+---------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    background: #f6f6f6;
+}
+
+/* ----------------------------------
+   HOVER EFFECTS
+---------------------------------- */
+.nav a:hover,
+.footer-right a:hover {
+    color: #2d63fc;
+    transition: 0.3s;
+}
+
+/* ----------------------------------
+   HEADER
+---------------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+/*logo*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo span {
+    color: #2d63fc;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*logo end*/
+
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav a.active {
+    color: #2d63fc;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.side-menu {
+    display: none;
+}
+
+/* ----------------------------------
+   HERO SECTION
+---------------------------------- */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 450px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ----------------------------------
+   CONTACT WRAPPER
+---------------------------------- */
+.contact-section {
+    width: 100%;
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    gap: 40px;
+}
+
+/* ----------------------------------
+   BLUE CARD
+---------------------------------- */
+.blue-card {
+    background: #0565ff;
+    background-image: url("../Images/Map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blue-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* ----------------------------------
+   INFO ROWS
+---------------------------------- */
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* ----------------------------------
+   FORM CARD
+---------------------------------- */
+.form-card {
+    padding: 20px 10px;
+}
+
+form .form-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #222;
+}
+
+input,
+textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    background: #0565ff;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/* ----------------------------------
+   FOOTER
+---------------------------------- */
+.footer {
+    background: #dfe7ff;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    flex-wrap: wrap;
+}
+
+.footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #2d63fc;
+}
+
+.footer-right a {
+    display: block;
+    margin: 6px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ----------------------------------
+   RESPONSIVE MOBILE
+---------------------------------- */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* side menu */
+    .side-menu {
+        display: block;
+    }
+
+    .side-menu {
+        height: calc(100vh - 30px);
+        width: 300px;
+        background: #ffffff;
+        position: fixed;
+        left: -350px;
+        top: 15px;
+        z-index: 1000;
+        transition: left 0.15s ease-in;
+        border-radius: 16px;
+    }
+
+    .active-state .side-menu {
+        left: 0;
+        box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 2px 334px 110px rgba(0, 0, 0, 0.75);
+    }
+
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .side-menu ul li {
+        width: 100%;
+        padding: 8px 30px;
+    }
+
+    .side-menu ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+    }
+
+    .toggler {
+        text-decoration: none;
+        font-size: 30px;
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 10px 16px 0 0;
+    }
+
+    /* side menu finished */
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        background: none;
+        border: none;
+        gap: 30px;
+    }
+
+    .blue-card {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 25px;
+        padding: 35px;
+        position: relative;
+        top: 40px;
+        z-index: 2;
+    }
+
+    .form-card {
+        width: 100%;
+        background: #fff;
+        padding: 80px 25px 40px;
+        border-radius: 25px;
+        margin-top: -20px;
+        z-index: 1;
+    }
+
+    form .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .send-btn {
+        width: 100%;
+        border-radius: 25px;
+        font-size: 16px;
+        padding: 14px 0;
+        float: none;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-line {
+        width: 100%;
+        height: 1px;
+        background: #000000;
+        margin: 20px 0;
+    }
+}
